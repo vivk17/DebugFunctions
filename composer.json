@@ -1,10 +1,11 @@
 {
     "name": "vivk17/DebugFunctions",
+	"version":"0.0.1",
 	"type": "library",
     "description": "Debug functions",
     "homepage": "https://github.com/vivk17/DebugFunctions",
     "require": {
-        "php": ">=5.4"
+        "php": ">=5.3.0"
     },
      "autoload": {
         "files": ["functions.php"]
