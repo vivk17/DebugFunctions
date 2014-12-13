@@ -13,7 +13,7 @@ function pre()
 		header('Content-type:text/html; charset=utf-8');
 	}
 
-	(new Dumper)->dump();
+	(new Dumper)->dump(func_get_args());
 }
 
 /**
@@ -27,6 +27,6 @@ function pred()
 		header('Content-type:text/html; charset=utf-8');
 	}
 
-	(new Dumper)->dump();
+	(new Dumper)->dump(func_get_args());
 	die;
 }

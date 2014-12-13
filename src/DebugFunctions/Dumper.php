@@ -17,12 +17,13 @@ class Dumper
 
 	/**
 	 * Вывести debug информацию
+	 * @param array $arg_list
 	 * @return \DebugFunctions\Dumper
 	 */
-	public function dump()
+	public function dump(array $arg_list)
 	{
 		return $this->_initHandler()
-			->_dumpByArgList(func_get_args());
+			->_dumpByArgList($arg_list);
 	}
 
 	/**
@@ -31,7 +32,7 @@ class Dumper
 	 * @return \DebugFunctions\Dumper
 	 * @throws \InvalidArgumentException
 	 */
-    public function setHandler(\callable $callable)
+    public function setHandler($callable)
     {
         if (null !== $callable && !is_callable($callable, true)) {
             throw new \InvalidArgumentException('Invalid PHP callback.');
