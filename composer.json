@@ -5,11 +5,17 @@
     "description": "Debug functions",
     "homepage": "https://github.com/vivk17/DebugFunctions",
     "require": {
-        "php": ">=5.3.0",
-		"symfony/var-dumper" : "dev-master"
+        "php": ">=5.4.0",
+		"symfony/var-dumper" : "2.*"
     },
      "autoload": {
         "files": ["Resources/functions/debug.php"],
 		"psr-0": {"DebugFunctions": "src/"}
-    }
+    },
+    "repositories": [
+        {
+            "type": "git",
+			"url": "http://github.com/symfony/var-dumper"
+        }
+    ]
 }
