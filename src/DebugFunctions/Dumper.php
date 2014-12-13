@@ -32,16 +32,16 @@ class Dumper
 	 * @return \DebugFunctions\Dumper
 	 * @throws \InvalidArgumentException
 	 */
-    public function setHandler($callable)
-    {
-        if (null !== $callable && !is_callable($callable, true)) {
-            throw new \InvalidArgumentException('Invalid PHP callback.');
-        }
+	public function setHandler($callable)
+	{
+		if (null !== $callable && !is_callable($callable, true)) {
+			throw new \InvalidArgumentException('Invalid PHP callback.');
+		}
 
-        $this->_handler = $callable;
+		$this->_handler = $callable;
 
-        return $this;
-    }
+		return $this;
+	}
 
 	/**
 	 * Инициализировать обработчик
